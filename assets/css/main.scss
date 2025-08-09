@@ -6,4 +6,47 @@ search: false
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+/* ==========================================================================
+   #MINIMAL MISTAKES
+   ========================================================================== */
+
+@import "minimal-mistakes";
+
+/* Custom sidebar dropdown styles */
+.sidebar .nav__list li {
+  position: relative;
+}
+
+.sidebar .nav__list li > ul {
+  display: none;
+  padding-left: 1em; /* Indent sub-menu */
+}
+
+.sidebar .nav__list li.active > ul {
+  display: block; /* Show sub-menu when active */
+}
+
+.nav__sub-toggle {
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  line-height: 1em;
+  font-weight: bold;
+}
+
+.nav__sub-toggle::before {
+  content: '+'; /* Show '+' by default */
+}
+
+.sidebar .nav__list li.active > .nav__sub-toggle::before {
+  content: '-'; /* Show '-' when active */
+}
+
+/* Style for top-level category links */
+.sidebar .nav__list .nav__items > li > .nav__sub-title {
+  color: #cf6679 !important;
+}
