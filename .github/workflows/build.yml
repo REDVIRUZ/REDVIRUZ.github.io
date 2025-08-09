@@ -3,13 +3,12 @@ name: build
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch: {}
   repository_dispatch: {}
 
 jobs:
   build:
-    if: github.repository == 'mmistakes/minimal-mistakes'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
