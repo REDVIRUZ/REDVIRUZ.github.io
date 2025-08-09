@@ -21,8 +21,8 @@ sidebar_nav:
         url: /categories/ios/
       - title: "Android"
         url: /categories/android/
-      - title: "Html / CSS"
-        url: /categories/htmlcss/
+      - title: "Github Blog"
+        url: /categories/githubblog/
   - title: "Server"
     children:
       - title: "Proxmox"
